@@ -36,7 +36,8 @@ d3.json(queryUrl).then(function (data) {
                 fillColor: chooseColor(feature.geometry.coordinates[2]),
                 color: chooseColor(feature.geometry.coordinates[2])
                 }
-                ).bindPopup(`<p>Magnitude and Location: </p><h3>${feature.properties.title}</h3>`);
+                ).bindPopup(`<p>Magnitude and Location: </p><h3>${feature.properties.title}</h3><br>
+                <p>Depth: </p><h4>${feature.geometry.coordinates[2]}</h4>`);
         }    
     }).addTo(myMap);
     // Add circles to the map.
